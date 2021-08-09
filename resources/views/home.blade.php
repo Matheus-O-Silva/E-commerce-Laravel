@@ -5,10 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
@@ -17,7 +13,7 @@
     
     <title>Nerd Shop | Home</title>
   </head>
-  <body>
+  <body class= "bg-dark text-black">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">Nerd Shop</a>
@@ -38,101 +34,106 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-md-0" style="margin-left: 100px">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control" type="text" placeholder="Buscar" aria-label="Search">
           </form>
         </div>
       </div>
+      <li class="nav-item">
+        <a href="#" class="btn btn-sm"><i class="fa fa-shopping-cart"></i></a>
+      </li>  
     </nav>
 
-    <!--For Page-->
-<div class="page">
-    <!--For Row containing all card-->
-    <div class="row">
-        <!--Card 1-->
-        <div class="col-sm">
-            <div class="card card-cascade card-ecommerce wider shadow mb-5 ">
-                <!--Card image-->
-                <div class="view view-cascade overlay text-center"> <img class="card-img-top" src="https://i.imgur.com/9VZGPJF.jpg" alt=""> <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a> </div>
-                <!--Card Body-->
-                <div class="card-body card-body-cascade text-center">
-                    <!--Card Title-->
-                    <h4 class="card-title"><strong><a href="">Mobile</a></strong></h4> <!-- Card Description-->
-                    <p class="card-text">This is a Mobile phone with all the advance features and at best price. </p>
-                    <p class="price">$50</p> <!-- Card Rating-->
-                    <ul class="row rating">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                    </ul>
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <p>ADD TO CART</p>
-                    </div>
+        
+        <div class="container mt-3">
+
+            <div class="row">
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto1.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a> 
                 </div>
-            </div>
-        </div>
-        <!--Card 2-->
-        <div class="col-sm">
-            <div class="card card-cascade card-ecommerce wider shadow mb-5 ">
-                <!--Card image-->
-                <div class="view view-cascade overlay text-center"> <img class="card-img-top" src="https://i.imgur.com/Fc9aj6m.jpg" alt=""> <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a> </div>
-                <!--Card Body-->
-                <div class="card-body card-body-cascade text-center">
-                    <!--Card Title-->
-                    <h4 class="card-title"><strong><a href="">Camera</a></strong></h4>
-                    <!--Card Description-->
-                    <p class="card-text">Comes with advance sensors, this is a perfect match for photographers. </p>
-                    <p class="price">$60</p> <!-- Card Rating-->
-                    <ul class="row rating">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                    </ul>
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <p>ADD TO CART</p>
-                    </div>
                 </div>
-            </div>
-        </div>
-        <!--Card 2-->
-        <div class="col-sm">
-            <div class="card card-cascade card-ecommerce wider shadow mb-5 ">
-                <!--Card image-->
-                <div class="view view-cascade overlay text-center"> <img class="card-img-top" src="https://i.imgur.com/FDdJ4Xm.jpg" alt=""> <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a> </div>
-                <!--Card Body-->
-                <div class="card-body card-body-cascade text-center">
-                    <!--Card Title-->
-                    <h4 class="card-title"><strong><a href="">Watch</a></strong></h4>
-                    <!--Description-->
-                    <p class="card-text">Smart watch with Easy-to-go connect option and fitness tracking functions. </p>
-                    <p class="price">$70</p> <!-- Card Rating-->
-                    <ul class="row rating">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                    </ul>
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <p>ADD TO CART</p>
-                    </div>
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto2.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Deadpool</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a>
                 </div>
-            </div>
+                </div>
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto3.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Star Wars Queen</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto4.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Playstation</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto5.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Super Mario cogumelo</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto6.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Free Rick</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto7.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Walter White - Breaking Bad</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto8.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Dharma Iniciative - Lost</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem; margin: 20px;">
+                <img class="card-img-top" src="{{ asset('images/produto9.jpeg') }}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta Lost</h5>
+                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                    <a href="#" class="btn btn-primary">Adicionar item</a>
+                </div>
+                </div>
+
+                
+
+            <div>
         </div>
-    </div>
-</div>
-    
+
+        
   </body>
 </html>
