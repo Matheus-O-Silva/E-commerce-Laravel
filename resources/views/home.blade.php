@@ -25,9 +25,9 @@
     <title>Nerd Shop | Home</title>
     <link rel="shotcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
   </head>
-  <body >
+  <body class= "bg-dark text-light" style="background-color: #BEBEBE;">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" style="background-color: #6495ED;" id="navbar">
         <div class="container py-3">
             <a href="#" class="navbar-brand primary-color">
                 <img src="{{ asset('img/favicon.ico') }}" alt="Imovi">
@@ -194,7 +194,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto2.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Deadpool</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -202,7 +202,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto3.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Star Wars Queen</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -210,7 +210,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto4.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Playstation</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -218,7 +218,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto5.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Super Mario cogumelo</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -226,7 +226,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto6.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Free Rick</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -234,7 +234,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto7.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Walter White - Breaking Bad</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -242,7 +242,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto8.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Dharma Iniciative - Lost</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -250,7 +250,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto9.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Lost</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -258,7 +258,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto10.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Pied Piper</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -266,7 +266,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto3.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Star Wars Queen</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -274,7 +274,7 @@
                 <div class="col-12 col-md-4">
                     <img class="card-img-top" src="{{ asset('images/produto4.jpeg') }}" alt="Imagem de capa do card">
                   <div class="card-body">
-                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <h5 class="card-title">Camiseta Playstation</h5>
                       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
                       <a href="#" class="btn btn-primary">Adicionar item</a> 
                   </div>
@@ -297,7 +297,7 @@
       <div class="col-12">
         <div class="row">
           <div class="col-12 col-md-5" id="info-banner">
-            <img src="{{ asset('img/infobanner.jpg') }}" alt="Informações" class="img-fluid" />
+            <img src="{{ asset('images/promo.jpg') }}" alt="Informações" class="img-fluid" />
           </div>
           <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
             <div class="row">
