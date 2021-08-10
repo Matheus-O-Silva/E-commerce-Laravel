@@ -49,12 +49,12 @@
             <div class="row">
 
                 <div class="card" style="width: 18rem; margin: 20px;">
-                <img class="card-img-top" src="{{ asset('images/produto1.jpeg') }}" alt="Imagem de capa do card">
-                <div class="card-body">
-                    <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
-                    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                    <a href="#" class="btn btn-primary">Adicionar item</a> 
-                </div>
+                  <img class="card-img-top" src="{{ asset('images/produto1.jpeg') }}" alt="Imagem de capa do card">
+                  <div class="card-body">
+                      <h5 class="card-title">Camiseta Dunder Mifflin.inc</h5>
+                      <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                      <a href="#" class="btn btn-primary">Adicionar item</a> 
+                  </div>
                 </div>
 
                 <div class="card" style="width: 18rem; margin: 20px;">
