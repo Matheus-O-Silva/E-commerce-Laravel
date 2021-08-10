@@ -231,5 +231,143 @@
 
     <!-- FIM DOS DESTAQUES -->
 
+    <!-- INFO -->
+
+    <div class="container" id="info-container">
+      <div class="col-12">
+        <h2 class="title primary-color">Detalhes Importantes</h2>
+        <p class="subtitle secondary-color">
+          Saiba mais sobre nossos incríveis produtos
+        </p>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12 col-md-5" id="info-banner">
+            <img src="{{ asset('img/infobanner.jpg') }}" alt="Informações" class="img-fluid" />
+          </div>
+          <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="title">Promoções que fazem sucesso:</h2>
+                <p class="subtitle secondary-color">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Praesentium tempore fugit et iusto quisquam beatae impedit
+                  nobis quas doloribus, atque, ut id similique eligendi, ab
+                  soluta magnam maxime cum debitis.
+                </p>
+              </div>
+              <div class="col-12" id="info-numbers">
+                <div class="row">
+                  <div class="col-4">
+                    <h3 class="primary-color">Lorem Ipsum</h3>
+                    <p class="secondary-color">Lorem ipsum dolor, sit amet consectetur adipisicing</p>
+                  </div>
+                  <div class="col-4">
+                    <h3 class="primary-color">Lorem Ipsum</h3>
+                    <p class="secondary-color">Lorem ipsum dolor, sit amet consectetur adipisicing</p>
+                  </div>
+                  <div class="col-4">
+                    <h3 class="primary-color">Lorem Ipsum</h3>
+                    <p class="secondary-color">Lorem ipsum dolor, sit amet consectetur adipisicing</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="btn btn-dark">Saber Mais</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIM INFO -->
+
+    <!-- FOOTER -->
+<footer class="container-fluid bg-dark-color" id="footer">
+      <div class="container" >
+        <div class="row mt-3" > 
+          <!-- FOOTER TOP -->
+          <div class="col-12" id="footer-top" style="margin-top: 5px;">
+            <div class="row justify-content-between">
+              <div class="col-4">
+                <h2 class="justify-content-between" >
+                  Nerd Shop
+                </h2>
+              </div>
+              <div class="col-4" id="social-icons" style="margin-top: 5px;">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-twitter"></i>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER DETAILS -->
+          <div class="col-12" id="footer-details">
+            <div class="row">
+              <div class="col-12 col-md-4" id="news-container">
+                <h4>Fique por dentro das novidades</h4>
+                <p class="secondary-color">
+                  Inscreva-se para saber em primeira mão
+                </p>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Digite o seu e-mail"
+                    />
+                  </div>
+                  <button class="btn btn-dark">Inscrever</button>
+                </form>
+              </div>
+              <div class="col-12 col-md-4" id="contact-container">
+                <h4>Formas de contato</h4>
+                <p class="secondary-color">(99)9999-9999</p>
+                <p class="secondary-color">contato@nerdshop.com</p>
+              </div>
+              <div class="col-12 col-md-4" id="links-container">
+                <div class="row">
+                  <h4>Você pode estar buscando por:</h4>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="secondary-color">Sob Demanda</a></li>
+                      <li><a href="#" class="secondary-color">Camisetas</a></li>
+                      <li><a href="#" class="secondary-color">Outros Produtos</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="secondary-color">Contratar</a></li>
+                      <li>
+                        <a href="#" class="secondary-color">Trabalhe conosco</a>
+                      </li>
+                      <li><a href="#" class="secondary-color">Contato</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER BOTTOM -->
+          <div class="col-12" id="footer-bottom">
+            <div class="row justify-content-between">
+              <div class="col-12 col-md-3" style="margin-top: 3px;">
+                <p class="secondary-color">NerdSHOP &copy; 2021</p>
+              </div>
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">
+                  Realizamos seu pedido com
+                  <i class="bi bi-heart"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FIM FOOTER -->
+
   </body>
 </html>
