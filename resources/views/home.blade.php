@@ -83,7 +83,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="{{ asset('img/banner_piticas.jpg') }}" alt="Banner 1" class="d-block w-100">
-                    <div class="carousel-caption">
+                    <div class="carousel-caption ">
                         <h5>Camisetas Geek</h5>
                         <a href="#" class="btn btn-dark">Ver produtos</a>
                     </div>
@@ -127,7 +127,7 @@
     <!-- FIM DO SLIDER -->
 
     <!-- MINI BANNER -->
-    <div class="col-12 col-md-10 offset-md-1" id="mini-banners">
+    <div class="col-12 col-md-10 offset-md-1 mt-3" id="mini-banners">
         <div class="row">
           <div class="col-12 col-md-4">
             <div class="card text-center">
