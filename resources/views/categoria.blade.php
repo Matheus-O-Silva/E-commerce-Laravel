@@ -11,17 +11,11 @@
     @if(isset($listaCategoria) && count($listaCategoria) > 0)
       <ul>
         @foreach ($listaCategoria as $categoria)
-            <li>{{ $categoria->categoria }}</li>
+            <li><a href="{{ route('categoria_by_id', ['idCategoria' => $categoria->id]) }}">{{ $categoria->categoria }}</a></li>
         @endforeach
       </ul>
     @endif
 
-    @if(isset($lista) && count($lista) > 0)
-      <ul>
-        @foreach ($lista as $produtos)
-            <li>{{ $produtos->nome }}</li>
-        @endforeach
-      </ul>
-    @endif
+    @include("produtos", ['lista' => $lista])
 @endsection    
 

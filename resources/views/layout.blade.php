@@ -44,7 +44,7 @@
             <div class="collapse navbar-collapse" id="navbar-items">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active primary-color" aria-current="page">Home</a>
+                        <a href="{{ route('home')}}" class="nav-link active primary-color" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('categoria')}}" class="nav-link primary-color">Categorias</a>
