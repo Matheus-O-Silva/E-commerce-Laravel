@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends RModel
 {
     use HasFactory;
+
+    protected $table = "categorias";
+
+    protected $fillable = ['categoria'];
 }
