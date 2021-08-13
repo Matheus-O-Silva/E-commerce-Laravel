@@ -10,9 +10,9 @@
 
     @if(isset($listaCategoria) && count($listaCategoria) > 0)
     <div class="list-group">
-        <a href="{{ route('categoria') }}" class="list-group-item list-group-item-action">Todas</a>
+        <a href="{{ route('categoria') }}" class="list-group-item list-group-item-action @if(0 == $idCategoria) active @endif">Todas</a>
         @foreach ($listaCategoria as $categoria)
-          <a href="{{ route('categoria_by_id', ['idCategoria' => $categoria->id]) }}" class="list-group-item list-group-item-action @if($categoria->id === $idCategoria) active @endif" >{{ $categoria->categoria }}</a>
+          <a href="{{ route('categoria_by_id', ['idCategoria' => $categoria->id]) }}" class="list-group-item list-group-item-action @if($categoria->id == $idCategoria) active @endif" >{{ $categoria->categoria }}</a>
     </div>      
         @endforeach
     @endif

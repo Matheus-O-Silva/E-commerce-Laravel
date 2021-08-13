@@ -15,7 +15,7 @@
               <div class="card-body">
                   <h5 class="card-title">{{ $prod->nome}} - R$ {{ $prod->valor }}</h5>
                   <p class="card-text">{{ $prod->descricao}}</p>
-                  <a href="#" class="btn btn-primary">Adicionar item</a> 
+                  <a href="{{ route('adicionar_carrinho', ['id_produto' => $prod->id])}}" class="btn btn-primary">Adicionar item</a> 
               </div>
             </div>
           @endforeach
