@@ -10,10 +10,10 @@
       <div class="row g-4">
         @if(isset($lista) && count($lista) > 0)
           @foreach ($lista as $prod)
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-2">
                 <img class="card-img-top" src="{{ asset( $prod->foto ) }}" alt="Imagem de capa do card">
               <div class="card-body">
-                  <h5 class="card-title">{{ $prod->nome}}</h5>
+                  <h5 class="card-title">{{ $prod->nome}} - R$ {{ $prod->valor }}</h5>
                   <p class="card-text">{{ $prod->descricao}}</p>
                   <a href="#" class="btn btn-primary">Adicionar item</a> 
               </div>

@@ -6,14 +6,15 @@
       <p class="subtitle secondary-color">
               Conheça nossas categorias de produtos
           </p>
-    </div>
+    
 
     @if(isset($listaCategoria) && count($listaCategoria) > 0)
-      <ul>
+    <div class="list-group">
+        <a href="{{ route('categoria') }}" class="list-group-item list-group-item-action">Todas</a>
         @foreach ($listaCategoria as $categoria)
-            <li><a href="{{ route('categoria_by_id', ['idCategoria' => $categoria->id]) }}">{{ $categoria->categoria }}</a></li>
+          <a href="{{ route('categoria_by_id', ['idCategoria' => $categoria->id]) }}" class="list-group-item list-group-item-action @if($categoria->id === $idCategoria) active @endif" >{{ $categoria->categoria }}</a>
+    </div>      
         @endforeach
-      </ul>
     @endif
 
     @include("produtos", ['lista' => $lista])
