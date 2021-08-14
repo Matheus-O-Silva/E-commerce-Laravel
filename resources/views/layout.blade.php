@@ -55,6 +55,9 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link primary-color">Contatos</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('ver_carrinho')}}" class="btn btn-sm"><i class="bi bi-cart-fill" style="heigh: 10px; width: 10px;"></i></a>
+                    </li>
                 </ul>
             </div>    
         </div>
