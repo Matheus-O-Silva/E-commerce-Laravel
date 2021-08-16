@@ -186,7 +186,7 @@
 
     <!-- INFO -->
 
-    <div class="container" id="info-container">
+    <div class="container mt-3" id="info-container">
       <div class="col-12">
         <h2 class="title primary-color">Detalhes Importantes</h2>
         <p class="subtitle secondary-color">
