@@ -26,12 +26,12 @@ class ClienteController extends Controller
         $endereco->logradouro = $request->input("endereço", "");
 
         try{
-
             $usuario->save();
             $endereco->usuario_id = $usuario->id;
+            $endereco->save();
 
         } catch (\Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "\n";
+            echo 'Caught exception: ',  $e->getMessage(), "\n"; 
         }
 
         return redirect()->route('cadastrar');

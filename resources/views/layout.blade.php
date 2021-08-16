@@ -47,16 +47,16 @@
             <div class="collapse navbar-collapse" id="navbar-items">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a href="{{ route('home')}}" class="nav-link active primary-color" aria-current="page">Home</a>
+                        <a href="{{ route('home')}}" class="nav-link {{ request()->is('/') ? 'active' : '' }} primary-color" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('categoria')}}" class="nav-link primary-color">Categorias</a>
+                        <a href="{{ route('categoria')}}" class="nav-link primary-color {{ request()->is('categoria') ? 'active' : '' }} ">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('cadastrar')}}" class="nav-link primary-color">Cadastrar</a>
+                        <a href="{{ route('cadastrar')}}" class="nav-link primary-color {{ request()->is('cadastrar') ? 'active' : '' }}">Cadastrar</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link primary-color">Contatos</a>
+                        <a href="#" class="nav-link primary-color {{ request()->is('contatos') ? 'active' : '' }}">Contatos</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('ver_carrinho')}}" class="btn btn-sm"><i class="bi bi-cart-fill" style="heigh: 10px; width: 10px;"></i></a>

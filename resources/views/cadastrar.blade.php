@@ -31,6 +31,7 @@
       $(function() {
         //Jquery Onload
         $("#cpf").mask("000.000.000-00")
+        $("#cep").mask("00000-000")
       })
     </script>
 
@@ -54,13 +55,13 @@
             <div class="collapse navbar-collapse" id="navbar-items">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a href="{{ route('home')}}" class="nav-link active primary-color" aria-current="page">Home</a>
+                        <a href="{{ route('home')}}" class="nav-link primary-color" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('categoria')}}" class="nav-link primary-color">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('cadastrar')}}" class="nav-link primary-color">Cadastrar</a>
+                        <a href="{{ route('cadastrar')}}" class="nav-link active primary-color">Cadastrar</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link primary-color">Contatos</a>
