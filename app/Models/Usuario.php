@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Usuario extends RModel
 {
-    use HasFactory;
+    protected $table = "usuarios";
+
+    protected $fillable = ['email','login', 'cpf', 'senha', 'nome'];
 }

@@ -16,11 +16,11 @@ class CreateEnderecosTable extends Migration
         Schema::create('enderecos', function (Blueprint $table) {
             $table->increments("id");
             $table->string("logradouro");
-            $table->string("numero");
+            $table->string("numero")->nullable();
             $table->string("cidade");
             $table->string("estado");
             $table->string("cep");
-            $table->string("compmlemento");
+            $table->string("complemento")->nullable();
             $table->timestamps();
 
             $table->integer("usuario_id")

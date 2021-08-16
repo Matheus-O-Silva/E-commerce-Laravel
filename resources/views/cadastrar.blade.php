@@ -24,6 +24,16 @@
         
     <title>Nerd Shop | Home</title>
     <link rel="shotcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.2/jquery.mask.min.js" integrity="sha512-Y/GIYsd+LaQm6bGysIClyez2HGCIN1yrs94wUrHoRAD5RSURkqqVQEU6mM51O90hqS80ABFTGtiDpSXd2O05nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(function() {
+        //Jquery Onload
+        $("#cpf").mask("000.000.000-00")
+      })
+    </script>
+
   </head>
   <body class= "bg-dark text-light" style="background-color: #BEBEBE;">
     <!-- NAVBAR -->
@@ -65,8 +75,7 @@
     <!-- FIM DA NAVBAR -->
 
     <!-- FORM DE CADASTRO -->
-    
-    
+
     <div class="container">
         <div class="row">
           <div class="col-12 mt-5">
@@ -75,46 +84,60 @@
                   </p>
               </div>   
           </div>
-          <form method="post" action="">
+          <form method="post" action="{{ route('cadastrar_cliente')}}">
+          @csrf
             <div class="form-group mt-3 col-6">
               <label for="Nome">Nome Completo</label>
-              <input type="text" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite seu nome completo">
+              <input type="text" name="nome" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite seu nome completo">
               <small id="emailHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group mt-3 col-6">
               <label for="Nome">CPF</label>
-              <input type="text" class="form-control" id="cpf" aria-describedby="cpf" placeholder="Digite seu CPF completo">
+              <input type="text" name="cpf" class="form-control" id="cpf" aria-describedby="cpf" placeholder="Digite seu CPF completo">
               <small id="emailHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group mt-3 col-6">
               <label for="email">E-mail</label>
-              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Digite seu melhor e-mail">
+              <input type="email" name="email" class="form-control" id="email" aria-describedby="email" placeholder="Digite seu melhor e-mail">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group col-6">
               <label for="Senha">Senha</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
+              <input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
             </div>
-
             <div class="col-12 mt-5 col-6">
                 <h2 class="title primary-color">Endereço</h2>
                 <p class="subtitle secondary-color">
                 </p>
             </div> 
-
             <div class="form-group mt-3 col-6">
-              <label for="Nome">Endereço</label>
-              <input type="text" class="form-control" id="Endereço" aria-describedby="Endereço" placeholder="Digite seu Endereço completo">
+              <label for="Logradouro">Logradouro</label>
+              <input type="text" name="endereco" class="form-control" id="endereco" aria-describedby="Endereço" placeholder="Digite seu Endereço completo">
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group mt-3 col-6">
+              <label for="Nome">Número</label>
+              <input type="text" name="numero" class="form-control" id="numero" aria-describedby="numero" placeholder="Número">
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group mt-3 col-6">
+              <label for="Nome">Complemento</label>
+              <input type="text" name="complemento" class="form-control" id="Complemento" aria-describedby="Complemento" placeholder="Complemento">
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group mt-3 col-6">
+              <label for="Nome">CEP</label>
+              <input type="text" name="cep" class="form-control" id="cep" aria-describedby="cep" placeholder="Digite seu cep">
               <small id="emailHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group mt-3 col-6">
               <label for="Nome">Cidade</label>
-              <input type="text" class="form-control" id="Cidade" aria-describedby="Cidade" placeholder="Digite sia Cidade">
+              <input type="text" name="cidade" class="form-control" id="Cidade" aria-describedby="Cidade" placeholder="Digite sua Cidade">
               <small id="emailHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group mt-3 col-6">
-              <label for="email">Estado</label>
-              <input type="email" class="form-control" id="Estado" aria-describedby="Estado" placeholder="Digite seu Estado">
+              <label for="estado">Estado</label>
+              <input type="text" name="estado" class="form-control" id="Estado" aria-describedby="Estado" placeholder="Digite seu Estado">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div> 
             <div class="form-check mt-3 col-6">
