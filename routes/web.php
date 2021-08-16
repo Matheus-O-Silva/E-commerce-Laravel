@@ -27,4 +27,6 @@ Route::match(['get','post'], '/{id_produto}/carrinho/adicionar', [ProdutoControl
 
 Route::match(['get','post'], '/carrinho', [ProdutoController::class, 'verCarrinho'])->name('ver_carrinho');
 
+Route::match(['get','post'], '/{indice}/excluir_carrinho', [ProdutoController::class, 'excluirCarrinho'])->name('carrinho_excluir');
+
 

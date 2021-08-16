@@ -22,10 +22,10 @@
             </thead>
             <tbody>
             </tbody>
-            @foreach ($cart as $p)
+            @foreach ($cart as $indice => $p)
                 <tr>
                     <td>
-                        <a href="#" class="btn btn-danger btn-sm">
+                        <a href="{{ route('carrinho_excluir',['indice' => $indice]) }}" class="btn btn-danger btn-sm">
                             <i class="bi bi-trash"></i>
                         </a>
                     </td>
@@ -36,6 +36,14 @@
                 </tr>
             @endforeach
             </table> 
+            @else 
+            <div class="container" id="featured-container">
+                <div class="col-12">
+                    <p class="subtitle secondary-color">
+                    "Não há Itens no seu Carrinho no momento"
+                    </p>
+                </div>    
+            </div>
             @endif 
         </div>    
     </div>         
