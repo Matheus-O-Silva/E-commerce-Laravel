@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\ClienteService as ControllersClienteService;
 use Illuminate\Http\Request;
 use App\Models\Usuario;
 use App\Models\Endereco;
+use App\Http\Controllers\Services\ClienteService;
 use Exception;
 
 class ClienteController extends Controller
@@ -25,16 +27,10 @@ class ClienteController extends Controller
         $endereco = new Endereco($values);
         $endereco->logradouro = $request->input("logradouro", "");
 
-        
-        try{
-            
-        $usuario->save();
-        $endereco->usuario_id = $usuario->id;
-        $endereco->save();
+        $clienteService = new ClienteService();
+        $result = $clienteService->salvarUsuario($usuario,$endereco);
 
-        } catch (Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "\n"; 
-        }
+        dd($result);
 
         return redirect()->route('cadastrar');
     }
