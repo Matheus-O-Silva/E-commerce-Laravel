@@ -13,6 +13,12 @@ class ClienteService extends Controller {
     public function salvarUsuario(Usuario $usuario, Endereco $endereco)
     {
         try{
+
+            $dbUsuario = Usuario::where("login", $usuario->login)->first();
+
+            if($dbUsuario){
+                return ['status' => 'erro','message' => 'Usuário já cadastrado no sistema'];
+            }
             
             $usuario->save();
             $endereco->usuario_id = $usuario->id;

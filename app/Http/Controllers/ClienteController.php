@@ -30,8 +30,11 @@ class ClienteController extends Controller
         $clienteService = new ClienteService();
         $result = $clienteService->salvarUsuario($usuario,$endereco);
 
-        dd($result);
+        $message = $result["message"];
+        $status  = $result["status"];
 
+
+        $request->session()->flash($status,$message);
         return redirect()->route('cadastrar');
     }
 }

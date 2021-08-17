@@ -75,6 +75,29 @@
     </nav>
     <!-- FIM DA NAVBAR -->
 
+    <!-- STATUS OK / STATUS ERRO -->
+    <div class="container">
+      <div class="row">
+        @if($message = Session::get("erro"))
+          <div class="col-12">
+            <div class="alert alert-danger">
+              {{ $message }}
+            <div>
+          </div>
+        @endif
+
+        @if($message = Session::get("ok"))
+          <div class="col-12">
+            <div class="alert alert-success">
+              {{ $message }}
+            <div>
+          </div>
+        @endif
+      </div>
+    </div>
+
+    <!-- FIM STATUS -->
+
     <!-- FORM DE CADASTRO -->
 
     <div class="container">
