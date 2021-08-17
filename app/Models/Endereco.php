@@ -11,5 +11,5 @@ class Endereco extends RModel
 
     protected $table = "enderecos";
 
-    protected $fillable = ['endereco', 'complemento', 'cep','numero', 'cidade', 'estado'];
+    protected $fillable = ['logradouro', 'complemento', 'cep','numero', 'cidade', 'estado'];
 }

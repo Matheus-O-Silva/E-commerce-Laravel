@@ -23,14 +23,16 @@ class ClienteController extends Controller
         $usuario->login = $request->input("cpf", "");
 
         $endereco = new Endereco($values);
-        $endereco->logradouro = $request->input("endereço", "");
+        $endereco->logradouro = $request->input("logradouro", "");
 
+        
         try{
-            $usuario->save();
-            $endereco->usuario_id = $usuario->id;
-            $endereco->save();
+            
+        $usuario->save();
+        $endereco->usuario_id = $usuario->id;
+        $endereco->save();
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             echo 'Caught exception: ',  $e->getMessage(), "\n"; 
         }
 

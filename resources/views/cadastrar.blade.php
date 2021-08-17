@@ -104,7 +104,7 @@
             </div>
             <div class="form-group col-6">
               <label for="Senha">Senha</label>
-              <input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
+              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
             </div>
             <div class="col-12 mt-5 col-6">
                 <h2 class="title primary-color">Endereço</h2>
@@ -113,7 +113,7 @@
             </div> 
             <div class="form-group mt-3 col-6">
               <label for="Logradouro">Logradouro</label>
-              <input type="text" name="endereco" class="form-control" id="endereco" aria-describedby="Endereço" placeholder="Digite seu Endereço completo">
+              <input type="text" name="logradouro" class="form-control" id="endereco" aria-describedby="Endereço" placeholder="Digite seu Endereço completo">
               <small id="emailHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group mt-3 col-6">
