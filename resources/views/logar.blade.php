@@ -61,7 +61,7 @@
                         <a href="{{ route('categoria')}}" class="nav-link primary-color">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('cadastrar')}}" class="nav-link active primary-color">Cadastrar</a>
+                        <a href="{{ route('cadastrar')}}" class="nav-link primary-color">Cadastrar</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link primary-color">Contatos</a>
@@ -78,105 +78,66 @@
     </nav>
     <!-- FIM DA NAVBAR -->
 
-    <!-- STATUS OK / STATUS ERRO -->
-    <div class="container">
-      <div class="row">
-        @if($message = Session::get("erro"))
-          <div class="col-12">
-            <div class="alert alert-danger">
-              {{ $message }}
-            <div>
-          </div>
-        @endif
+    <!-- FORM LOGIN -->
+    <div class="d-flex justify-content-center">
+    <div class="card  text-dark text-center" style="width: 300px; margin: 150px 30px 30px;">
 
-        @if($message = Session::get("ok"))
-          <div class="col-12">
-            <div class="alert alert-success">
-              {{ $message }}
-            <div>
-          </div>
-        @endif
-      </div>
+        <div class="card-header">
+            <h1>Entrar</h1>
+        </div>
+
+        <div class="card-body">
+
+             <!-- STATUS OK / STATUS ERRO -->
+            <div class="container">
+                <div class="row">
+                    @if($message = Session::get("erro"))
+                    <div class="col-12">
+                        <div class="alert alert-danger">
+                        {{ $message }}
+                        <div>
+                    </div>
+                    @endif
+
+                    @if($message = Session::get("ok"))
+                    <div class="col-12">
+                        <div class="alert alert-success">
+                        {{ $message }}
+                        <div>
+                    </div>
+                    @endif
+                </div>
+            </div>
+
+            <!-- FIM STATUS -->
+
+
+            <form method="post" action="{{ route('logar')}}">
+            @csrf
+
+                <div class="form-group">
+                    <label><strong>CPF</strong></label>
+                    <input type="text" class="form-control" id="cpf" name="login" placeholder="000.000.000-00" required autofocus>
+                </div>
+
+                <div class="form-group my-4">
+                    <label><strong>Senha</strong></label>
+                    <input type="password" name="senha" class="form-control" placeholder="*********" required>
+                </div>
+
+                <button type="submit" value="logar" class="btn btn-lg btn-success">Entrar</button>
+
+            </form>    
+
+        </div>
+
     </div>
+</div>
+    
 
-    <!-- FIM STATUS -->
+    <!-- FIM FORM LOGIN -->
 
-    <!-- FORM DE CADASTRO -->
-
-    <div class="container">
-        <div class="row">
-          <div class="col-12 mt-5">
-                  <h2 class="title primary-color">Dados Pessoais</h2>
-                  <p class="subtitle secondary-color">
-                  </p>
-              </div>   
-          </div>
-          <form method="post" action="{{ route('cadastrar_cliente')}}">
-          @csrf
-            <div class="form-group mt-3 col-6">
-              <label for="Nome">Nome Completo</label>
-              <input type="text" name="nome" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite seu nome completo">
-              <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group mt-3 col-6">
-              <label for="Nome">CPF</label>
-              <input type="text" name="cpf" class="form-control" id="cpf" aria-describedby="cpf" placeholder="Digite seu CPF completo">
-              <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group mt-3 col-6">
-              <label for="email">E-mail</label>
-              <input type="email" name="email" class="form-control" id="email" aria-describedby="email" placeholder="Digite seu melhor e-mail">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group col-6">
-              <label for="Senha">Senha</label>
-              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
-            </div>
-            <div class="col-12 mt-5 col-6">
-                <h2 class="title primary-color">Endereço</h2>
-                <p class="subtitle secondary-color">
-                </p>
-            </div> 
-            <div class="form-group mt-3 col-6">
-              <label for="Logradouro">Logradouro</label>
-              <input type="text" name="logradouro" class="form-control" id="endereco" aria-describedby="Endereço" placeholder="Digite seu Endereço completo">
-              <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group mt-3 col-6">
-              <label for="Nome">Número</label>
-              <input type="text" name="numero" class="form-control" id="numero" aria-describedby="numero" placeholder="Número">
-              <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group mt-3 col-6">
-              <label for="Nome">Complemento</label>
-              <input type="text" name="complemento" class="form-control" id="Complemento" aria-describedby="Complemento" placeholder="Complemento">
-              <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group mt-3 col-6">
-              <label for="Nome">CEP</label>
-              <input type="text" name="cep" class="form-control" id="cep" aria-describedby="cep" placeholder="Digite seu cep">
-              <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group mt-3 col-6">
-              <label for="Nome">Cidade</label>
-              <input type="text" name="cidade" class="form-control" id="Cidade" aria-describedby="Cidade" placeholder="Digite sua Cidade">
-              <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group mt-3 col-6">
-              <label for="estado">Estado</label>
-              <input type="text" name="estado" class="form-control" id="Estado" aria-describedby="Estado" placeholder="Digite seu Estado">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div> 
-            <div class="form-check mt-3 col-6">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" value="cadastrar" class="btn btn-primary mt-3">Cadastrar</button>
-          </form>
-        </div>    
-    </div>         
-
-    <!-- FIM FORM CADASTRO -->
+ 
     
 
 
