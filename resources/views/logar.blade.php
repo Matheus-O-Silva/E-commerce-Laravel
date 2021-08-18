@@ -31,7 +31,6 @@
       $(function() {
         //Jquery Onload
         $("#cpf").mask("000.000.000-00")
-        $("#cep").mask("00000-000")
       })
     </script>
 
@@ -80,59 +79,57 @@
 
     <!-- FORM LOGIN -->
     <div class="d-flex justify-content-center">
-    <div class="card  text-dark text-center" style="width: 300px; margin: 150px 30px 30px;">
+      <div class="card  text-dark text-center" style="width: 300px; margin: 200px 80px 80px;">
 
         <div class="card-header">
-            <h1>Entrar</h1>
+              <h1>Entrar</h1>
+          </div>
+
+          <div class="card-body">
+
+              <!-- STATUS OK / STATUS ERRO -->
+              <div class="container">
+                  <div class="row">
+                      @if($message = Session::get("erro"))
+                      <div class="col-12">
+                          <div class="alert alert-danger">
+                          {{ $message }}
+                          <div>
+                      </div>
+                      @endif
+
+                      @if($message = Session::get("ok"))
+                      <div class="col-12">
+                          <div class="alert alert-success">
+                          {{ $message }}
+                          <div>
+                      </div>
+                      @endif
+                  </div>
+              </div>
+
+              <!-- FIM STATUS -->
+
+
+              <form method="post" action="{{ route('logar')}}">
+              @csrf
+
+                  <div class="form-group">
+                      <label><strong>CPF</strong></label>
+                      <input type="text" class="form-control" id="cpf" name="login" placeholder="000.000.000-00" required autofocus>
+                  </div>
+
+                  <div class="form-group my-4">
+                      <label><strong>Senha</strong></label>
+                      <input type="password" name="senha" class="form-control" placeholder="*********" required>
+                  </div>
+
+                  <button type="submit" value="logar" class="btn btn-lg btn-success">Entrar</button>
+
+              </form> 
         </div>
-
-        <div class="card-body">
-
-             <!-- STATUS OK / STATUS ERRO -->
-            <div class="container">
-                <div class="row">
-                    @if($message = Session::get("erro"))
-                    <div class="col-12">
-                        <div class="alert alert-danger">
-                        {{ $message }}
-                        <div>
-                    </div>
-                    @endif
-
-                    @if($message = Session::get("ok"))
-                    <div class="col-12">
-                        <div class="alert alert-success">
-                        {{ $message }}
-                        <div>
-                    </div>
-                    @endif
-                </div>
-            </div>
-
-            <!-- FIM STATUS -->
-
-
-            <form method="post" action="{{ route('logar')}}">
-            @csrf
-
-                <div class="form-group">
-                    <label><strong>CPF</strong></label>
-                    <input type="text" class="form-control" id="cpf" name="login" placeholder="000.000.000-00" required autofocus>
-                </div>
-
-                <div class="form-group my-4">
-                    <label><strong>Senha</strong></label>
-                    <input type="password" name="senha" class="form-control" placeholder="*********" required>
-                </div>
-
-                <button type="submit" value="logar" class="btn btn-lg btn-success">Entrar</button>
-
-            </form>    
-
-        </div>
-
+      </div>
     </div>
-</div>
     
 
     <!-- FIM FORM LOGIN -->

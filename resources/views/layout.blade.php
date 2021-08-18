@@ -70,6 +70,12 @@
     </nav>
     <!-- FIM DA NAVBAR -->
 
+    @if(\Auth::user())
+      <div class="col-12">
+        <p class="text-right">Seja bem-vindo, {{ \Auth::user()->nome }}</p>
+      </div>
+    @endif  
+
     <!-- SLIDER -->
     <div class="container" id="slider-container">
         <div class="carousel slide" id="slider" data-bs-ride="carousel">

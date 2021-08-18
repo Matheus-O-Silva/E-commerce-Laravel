@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Contracts\Auth\Authenticatable;
 use App\Models\Produto;
 use App\Models\Categoria;
 
@@ -16,6 +17,8 @@ class UsuarioController extends Controller
         if($request->isMethod("POST")){
             $login = $request->input("login");
             $senha = $request->input("senha");
+
+            $login = preg_replace("/[^0-9]/","",$login);
 
             $credential = ['login' => $login, 'password' => $senha];
 
