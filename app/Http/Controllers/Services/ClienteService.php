@@ -8,7 +8,8 @@ use App\Http\Controllers\Controller;
 use Log;
 use Exception;
 
-class ClienteService extends Controller {
+class ClienteService extends Controller 
+{
 
     public function salvarUsuario(Usuario $usuario, Endereco $endereco)
     {
