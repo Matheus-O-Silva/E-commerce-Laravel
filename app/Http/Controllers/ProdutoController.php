@@ -97,6 +97,10 @@ class ProdutoController extends Controller
 
     public function historico(Request $request)
     {
-        
+        $data = [];
+
+        $idUsuario = Auth::user()->id;
+
+        return view("compra/historico", $data);
     }
 }
