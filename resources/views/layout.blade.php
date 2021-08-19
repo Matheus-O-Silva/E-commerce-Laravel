@@ -58,9 +58,18 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link primary-color {{ request()->is('contatos') ? 'active' : '' }}">Contatos</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('logar')}}" class="nav-link primary-color {{ request()->is('logar') ? 'active' : '' }}">Entrar</a>
-                    </li>
+                    @if(!\Auth::user())
+                      <li class="nav-item">
+                          <a href="{{ route('logar')}}" class="nav-link primary-color {{ request()->is('logar') ? 'active' : '' }}">Entrar</a>
+                      </li>
+                    @else
+                      <li class="nav-item">
+                          <a href="{{ route('compras_carrinho')}}" class="nav-link primary-color {{ request()->is('compras_carrinho') ? 'active' : '' }}">Entrar</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="{{ route('sair')}}" class="nav-link primary-color">Entrar</a>
+                      </li>
+                    @endif  
                     <li class="nav-item">
                         <a href="{{ route('ver_carrinho')}}" class="btn btn-sm"><i class="bi bi-cart-fill" style="heigh: 10px; width: 10px;"></i></a>
                     </li>

@@ -94,4 +94,9 @@ class ProdutoController extends Controller
 
         return redirect()->route("ver_carrinho");
     }
+
+    public function historico(Request $request)
+    {
+        
+    }
 }

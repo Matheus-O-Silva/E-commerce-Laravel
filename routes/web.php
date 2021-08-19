@@ -36,4 +36,6 @@ Route::match(['get','post'], '/carrinho', [ProdutoController::class, 'verCarrinh
 
 Route::match(['get','post'], '/{indice}/excluir_carrinho', [ProdutoController::class, 'excluirCarrinho'])->name('carrinho_excluir');
 
+Route::match(['get','post'], '/compras/historico', [ProdutoController::class, 'historico'])->name('compra_historico');
+
 
