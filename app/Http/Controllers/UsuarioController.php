@@ -20,9 +20,9 @@ class UsuarioController extends Controller
 
             $login = preg_replace("/[^0-9]/","",$login);
 
-            $credential = ['login' => $login, 'password' => $senha];
+            $credentials = ['login' => $login, 'password' => $senha];
 
-            if(Auth::attempt($credential)){
+            if(Auth::attempt($credentials)){
                 return redirect()->route("home");
             } else {
                 $request->session()->flash("erro", "Usuário e ou Senha inválidos");
