@@ -58,32 +58,32 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link primary-color {{ request()->is('contatos') ? 'active' : '' }}">Contatos</a>
                     </li>
-                    @if(!\Auth::user())
+                    @if(!session('LoggedUser'))
                       <li class="nav-item">
                           <a href="{{ route('logar')}}" class="nav-link primary-color {{ request()->is('logar') ? 'active' : '' }}">Entrar</a>
                       </li>
                     @else
                       <li class="nav-item">
-                          <a href="{{ route('compras_carrinho')}}" class="nav-link primary-color {{ request()->is('compras_carrinho') ? 'active' : '' }}">Entrar</a>
+                          <a href="#" class="nav-link primary-color {{ request()->is('compras_carrinho') ? 'active' : '' }}">Minhas Compras</a>
                       </li>
                       <li class="nav-item">
-                          <a href="{{ route('sair')}}" class="nav-link primary-color">Entrar</a>
+                          <a href="#" class="nav-link primary-color">Sair</a>
                       </li>
                     @endif  
                     <li class="nav-item">
                         <a href="{{ route('ver_carrinho')}}" class="btn btn-sm"><i class="bi bi-cart-fill" style="heigh: 10px; width: 10px;"></i></a>
                     </li>
                 </ul>
-            </div>    
+            </div>   
+          @if(session('LoggedUser'))
+            <div class="col-12">
+              <p class="text-right">Seja bem-vindo, {{ 'Fulano' }}</p>
+            </div>
+          @endif     
         </div>
     </nav>
     <!-- FIM DA NAVBAR -->
 
-    @if(\Auth::user())
-      <div class="col-12">
-        <p class="text-right">Seja bem-vindo, {{ \Auth::user()->nome }}</p>
-      </div>
-    @endif  
 
     <!-- SLIDER -->
     <div class="container" id="slider-container">

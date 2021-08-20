@@ -36,6 +36,8 @@ class UsuarioController extends Controller
                }
            }
        }
+
+       $data = ['LoggedUserinfo' => Users::where('id', '=', session('LoggedUser'))->first()];
         
 
         //     $credentials = $request->validate([
