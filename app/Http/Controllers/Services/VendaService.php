@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Services;
 
-use App\Models\Usuario;
+use App\Models\Users;
 use App\Models\Pedido;
 use App\Models\ItensPedido;
 use App\Http\Controllers\Controller;
@@ -11,7 +11,7 @@ use Exception;
 
 class VendaService extends Controller 
 {
-    public function finalizarVenda($products = [], Usuario $usuario)
+    public function finalizarVenda($products = [], Users $usuario)
     {
         try{
             $dtHoje = new \DateTime();

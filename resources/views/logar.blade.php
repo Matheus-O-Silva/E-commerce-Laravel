@@ -115,13 +115,13 @@
               @csrf
 
                   <div class="form-group">
-                      <label><strong>CPF</strong></label>
-                      <input type="text" class="form-control" id="cpf" name="login" placeholder="000.000.000-00" required autofocus>
+                      <label><strong>Email</strong></label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="000.000.000-00" required autofocus>
                   </div>
 
                   <div class="form-group my-4">
                       <label><strong>Senha</strong></label>
-                      <input type="password" name="senha" class="form-control" placeholder="*********" required>
+                      <input type="password" name="password" class="form-control" placeholder="*********" required>
                   </div>
 
                   <button type="submit" value="logar" class="btn btn-lg btn-success">Entrar</button>

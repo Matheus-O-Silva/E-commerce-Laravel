@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Services;
 
-use App\Models\Usuario;
+use App\Models\Users;
 use App\Models\Endereco;
 use App\Http\Controllers\Controller;
 use Log;
@@ -11,11 +11,11 @@ use Exception;
 class ClienteService extends Controller 
 {
 
-    public function salvarUsuario(Usuario $usuario, Endereco $endereco)
+    public function salvarUsuario(Users $usuario, Endereco $endereco)
     {
         try{
 
-            $dbUsuario = Usuario::where("login", $usuario->login)->first();
+            $dbUsuario = Users::where("login", $usuario->login)->first();
 
             if($dbUsuario){
                 return ['status' => 'erro','message' => 'Usuário já cadastrado no sistema'];
