@@ -28,14 +28,20 @@ Route::match(['get','post'], '/cliente/cadastrar', [ClienteController::class, 'c
 
 Route::match(['get','post'], '/logar', [UsuarioController::class, 'logar'])->name('logar');
 
-Route::match(['get','post'], '/{id_produto}/carrinho/adicionar', [ProdutoController::class, 'adicionarCarrinho'])->name('adicionar_carrinho');
 
-Route::match(['post'], '/carrinho/finalizar', [ProdutoController::class, 'finalizar'])->name('carrinho_finalizar');
+Route::group(['middleware' => ['AuthCheck']], function(){
 
-Route::match(['get','post'], '/carrinho', [ProdutoController::class, 'verCarrinho'])->name('ver_carrinho');
+    Route::match(['post'], '/carrinho/finalizar', [ProdutoController::class, 'finalizar'])->name('carrinho_finalizar');
 
-Route::match(['get','post'], '/{indice}/excluir_carrinho', [ProdutoController::class, 'excluirCarrinho'])->name('carrinho_excluir');
+    Route::match(['get','post'], '/carrinho', [ProdutoController::class, 'verCarrinho'])->name('ver_carrinho');
 
-Route::match(['get','post'], '/compras/historico', [ProdutoController::class, 'historico'])->name('compra_historico');
+    Route::match(['get','post'], '/{id_produto}/carrinho/adicionar', [ProdutoController::class, 'adicionarCarrinho'])->name('adicionar_carrinho');
+    
+    Route::match(['get','post'], '/{indice}/excluir_carrinho', [ProdutoController::class, 'excluirCarrinho'])->name('carrinho_excluir');
+
+    Route::match(['get','post'], '/sair', [UsuarioController::class, 'sair'])->name('sair');
+
+    Route::match(['get','post'], '/compras/historico', [ProdutoController::class, 'historico'])->name('compra_historico');
+});
 
 

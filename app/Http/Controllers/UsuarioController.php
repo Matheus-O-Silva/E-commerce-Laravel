@@ -35,24 +35,15 @@ class UsuarioController extends Controller
                }
            }
        }
-        
-
-        //     $credentials = $request->validate([
-        //         'email' => ['required'],
-        //         'password' => ['required'],
-        //     ]);
-
-        //     $credentials = $request->only('email','password');
-
-        //     if(Auth::attempt($credentials)){
-        //         return redirect()->route("home");
-        //     } else {
-        //         $request->session()->flash("erro", "Usuário e ou Senha inválidos");
-        //         echo "<script type='javascript'>alert('Usuário e ou Senha inválidos');";
-        //         return redirect()->route("logar");
-        //     }
-        // }
 
         return view("logar");
+    }
+
+    public function sair()
+    {
+        if(session()->has('LoggedUser')){
+            session()->pull('LoggedUser','cart');
+            return redirect()->route("home");
+        }
     }
 }

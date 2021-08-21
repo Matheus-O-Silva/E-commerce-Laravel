@@ -67,7 +67,7 @@
                           <a href="#" class="nav-link primary-color {{ request()->is('compras_carrinho') ? 'active' : '' }}">Minhas Compras</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link primary-color">Sair</a>
+                          <a href="{{ route('sair')}}" class="nav-link primary-color">Sair</a>
                       </li>
                     @endif  
                     <li class="nav-item">
