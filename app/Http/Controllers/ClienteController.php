@@ -14,7 +14,7 @@ class ClienteController extends Controller
 {
     public function cadastrar(Request $request)
     {
-        $data = [];
+        $data['LoggedUserinfo'] = Users::where('id', '=', session('LoggedUser'))->first();
         return view("cadastrar", $data);
     }
 

@@ -14,7 +14,6 @@ class UsuarioController extends Controller
 {
     public function logar(Request $request)
     {
-        $data = [];
 
         if($request->isMethod("POST")){
    
@@ -36,8 +35,6 @@ class UsuarioController extends Controller
                }
            }
        }
-
-       $data = ['LoggedUserinfo' => Users::where('id', '=', session('LoggedUser'))->first()];
         
 
         //     $credentials = $request->validate([
@@ -56,6 +53,6 @@ class UsuarioController extends Controller
         //     }
         // }
 
-        return view("logar", $data);
+        return view("logar");
     }
 }

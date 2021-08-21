@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use App\Models\Users;
 use App\Models\Categoria;
 use App\Http\Controllers\Services\VendaService;
 use Illuminate\Support\Facades\Auth;
@@ -13,13 +14,14 @@ class ProdutoController extends Controller
     public function index(Request $request)
     {
 
-        $data = [];
+        $data = ['LoggedUserinfo' => Users::where('id', '=', session('LoggedUser'))->first()];
 
         //Buscar todos os produtos
         $listaProdutos = Produto::all(); //Select * from Produtos 
         $data['lista'] = $listaProdutos;
 
         return view("home", $data);
+
     }
 
     public function categoria(Request $request, $idCategoria = 0)
@@ -41,11 +43,14 @@ class ProdutoController extends Controller
 
         $data['lista'] = $listaProdutos;
         $data['listaCategoria'] = $listaCategoria;
+        $data['LoggedUserinfo'] = Users::where('id', '=', session('LoggedUser'))->first();
         return view("categoria", $data);
     }
 
     public function adicionarCarrinho($idProduto = 0,Request $request)
     {
+
+        $data['LoggedUserinfo'] = Users::where('id', '=', session('LoggedUser'))->first();
         //Buscar produto por ID
         $prod = Produto::find($idProduto);
 
@@ -58,33 +63,35 @@ class ProdutoController extends Controller
             session(['cart' => $carrinho]);
         }
 
-        return redirect()->route("home");
+        return redirect()->route("home",$data);
     }
 
     public function verCarrinho(Request $request)
     {
         $carrinho = session('cart', []);
-        $data = ['cart' => $carrinho];
+        $data = ['cart' => $carrinho, 'LoggedUserinfo' => Users::where('id', '=', session('LoggedUser'))->first()];
 
         return view("carrinho", $data);
     }
 
     public function excluirCarrinho($indice, Request $request)
     {
+        $data['LoggedUserinfo'] = Users::where('id', '=', session('LoggedUser'))->first();
         $carrinho = session('cart', []);
         if(isset($carrinho[$indice])){
             unset($carrinho[$indice]);
         }
 
         session(["cart" => $carrinho]);
-        return redirect()->route("ver_carrinho");
+        return redirect()->route("ver_carrinho",$data);
     }
 
     public function finalizar(Request $request)
     {
+        $data['LoggedUserinfo'] = Users::where('id', '=', session('LoggedUser'))->first();
         $products = session('cart', []);
         $vendaService = new VendaService();
-        $result = $vendaService->finalizarVenda($products, Auth::user());
+        $result = $vendaService->finalizarVenda($products, $data['LoggedUserinfo']);
 
         if($result["status"] == "ok"){
             $request()->session()->forget("cart");
@@ -92,7 +99,7 @@ class ProdutoController extends Controller
 
         $request->session()->flash($result['status'], $result['message']);
 
-        return redirect()->route("ver_carrinho");
+        return redirect()->route("ver_carrinho",$data);
     }
 
     public function historico(Request $request)

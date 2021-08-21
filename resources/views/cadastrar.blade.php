@@ -64,16 +64,30 @@
                         <a href="{{ route('cadastrar')}}" class="nav-link active primary-color">Cadastrar</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link primary-color">Contatos</a>
+                        <a href="#" class="nav-link primary-color {{ request()->is('contatos') ? 'active' : '' }}">Contatos</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('logar')}}" class="nav-link primary-color {{ request()->is('logar') ? 'active' : '' }}">Entrar</a>
-                    </li>
+                    @if(!session('LoggedUser'))
+                      <li class="nav-item">
+                          <a href="{{ route('logar')}}" class="nav-link primary-color {{ request()->is('logar') ? 'active' : '' }}">Entrar</a>
+                      </li>
+                    @else
+                      <li class="nav-item">
+                          <a href="#" class="nav-link primary-color {{ request()->is('compras_carrinho') ? 'active' : '' }}">Minhas Compras</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link primary-color">Sair</a>
+                      </li>
+                    @endif  
                     <li class="nav-item">
                         <a href="{{ route('ver_carrinho')}}" class="btn btn-sm"><i class="bi bi-cart-fill" style="heigh: 10px; width: 10px;"></i></a>
                     </li>
                 </ul>
-            </div>    
+            </div>   
+          @if(session('LoggedUser'))
+            <div class="col-12">
+              <p class="text-right">Seja bem-vindo(a), {{ $LoggedUserinfo->nome }}</p>
+            </div>
+          @endif     
         </div>
     </nav>
     <!-- FIM DA NAVBAR -->

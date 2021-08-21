@@ -77,7 +77,7 @@
             </div>   
           @if(session('LoggedUser'))
             <div class="col-12">
-              <p class="text-right">Seja bem-vindo, {{ 'Fulano' }}</p>
+              <p class="text-right">Seja bem-vindo(a), {{ $LoggedUserinfo->nome }}</p>
             </div>
           @endif     
         </div>
