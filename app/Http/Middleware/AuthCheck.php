@@ -17,11 +17,11 @@ class AuthCheck
     public function handle(Request $request, Closure $next)
     {
 
-        if(!session()->has('LoggedUser')){
+        if(!session()->has('LoggedUser') && ($request->path() !='logar' && $request->path() !='cadastrar')){
             return redirect('logar')->with('Você precisa estar logado para acessar esta página');
         }
 
-        if(session()->has('LoggedUser') && ($request->path() !='logar' && $request->path() !='cadastrar')){
+        if(session()->has('LoggedUser') && ($request->path() == 'logar' && $request->path() == 'cadastrar')){
             return back();
         }
 

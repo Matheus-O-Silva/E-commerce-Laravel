@@ -42,8 +42,9 @@ class UsuarioController extends Controller
     public function sair()
     {
         if(session()->has('LoggedUser')){
-            session()->pull('LoggedUser','cart');
-            return redirect()->route("home");
+            session()->pull('LoggedUser');
+            session()->pull('cart');
+            return redirect()->route("logar");
         }
     }
 }
