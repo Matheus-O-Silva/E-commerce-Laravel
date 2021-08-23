@@ -108,15 +108,17 @@ class ProdutoController extends Controller
 
         $data['LoggedUserinfo'] = Users::where('id', '=', session('LoggedUser'))->first();
 
-        $idUsuario = Auth::user()->id;
+        $idUsuario = $data['LoggedUserinfo'];
 
-        return view("compra/historico", $data);
+        return view("compra_historico", $data);
     }
 
     public function pagar(Request $request)
     {
         $data = [];
 
-        return view('compra/pagar', $data);
+        $data['LoggedUserinfo'] = Users::where('id', '=', session('LoggedUser'))->first();
+
+        return view('pagar', $data);
     }
 }
