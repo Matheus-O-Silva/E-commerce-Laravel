@@ -33,6 +33,8 @@ Route::group(['middleware' => ['AuthCheck']], function(){
 
     Route::match(['post'], '/carrinho/finalizar', [ProdutoController::class, 'finalizar'])->name('carrinho_finalizar');
 
+    Route::match(['post'], '/compras/pagar', [ProdutoController::class, 'pagar'])->name('pagar');
+
     Route::match(['get','post'], '/carrinho', [ProdutoController::class, 'verCarrinho'])->name('ver_carrinho');
 
     Route::match(['get','post'], '/{id_produto}/carrinho/adicionar', [ProdutoController::class, 'adicionarCarrinho'])->name('adicionar_carrinho');

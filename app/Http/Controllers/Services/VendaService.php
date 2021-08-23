@@ -31,7 +31,7 @@ class VendaService extends Controller
                 $itens->dt_item    = $dtHoje->format("Y-m-d H:i:s");
                 $itens->produto_id = $product->id;
                 $itens->pedido_id  = $pedido->id;
-                $itens->save();
+                $itens->save(); 
             }
             
             return ['status' => 'ok','message' => 'compra finalizada com sucesso!'];

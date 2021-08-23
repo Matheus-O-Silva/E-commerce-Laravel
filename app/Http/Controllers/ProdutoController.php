@@ -99,15 +99,24 @@ class ProdutoController extends Controller
 
         $request->session()->flash($result['status'], $result['message']);
 
-        return redirect()->route("ver_carrinho",$data);
+        return redirect()->route("ver_carrinho",$data['LoggedUserinfo']);
     }
 
     public function historico(Request $request)
     {
         $data = [];
 
+        $data['LoggedUserinfo'] = Users::where('id', '=', session('LoggedUser'))->first();
+
         $idUsuario = Auth::user()->id;
 
         return view("compra/historico", $data);
+    }
+
+    public function pagar(Request $request)
+    {
+        $data = [];
+
+        return view('compra/pagar', $data);
     }
 }
